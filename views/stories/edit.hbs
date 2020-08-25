@@ -1,9 +1,10 @@
 <h3>Add Story</h3>
 <div class="row">
-    <form action="/stories" method="POST" class="col s12">
+    <form action="/stories/{{story._id}}" method="POST" class="col s12">
+        <input type="hidden" name="_method" value="PUT">
         <div class="row">
             <div class="input-field">
-                <input type="text" value={{story.title}} class="text" name="title" id="title">
+                <input type="text" value="{{story.title}}" class="text" name="title" id="title">
                 <label for="title">Title</label>
 
             </div>
